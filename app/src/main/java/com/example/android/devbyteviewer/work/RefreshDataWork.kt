@@ -31,9 +31,6 @@ class RefreshDataWorker(appContext: Context, params: WorkerParameters):
         const val WORK_NAME = "RefreshDataWorker"
     }
 
-    /**
-     * A coroutine-friendly method to do your work.
-     */
     override suspend fun doWork(): Result {
         val database = getDatabase(applicationContext)
         val repository = VideosRepository(database)
